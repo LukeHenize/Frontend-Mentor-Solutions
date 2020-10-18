@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Article Preview</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="wrapper">
+            <img id="drawers" src="images/drawers.jpg" alt="Furniture in your home">
+            <div id="article-desc">
+                <h1 id="title">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
+                <h2 id="description">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.</h2>
+                <div id="article-info">
+                    <div id="author-info" class="active-flex">
+                        <img id="avatar" src="images/avatar-michelle.jpg">
+                        <div id="name-date">
+                            <h2 id="name">Michelle Appleton</h2>
+                            <h2 id="date">28 Jun 2020</h2>
+                        </div>
+                    </div>
+                    <div id="share-background" onclick = "share()">
+                        <img id="share" src="images/icon-share.svg" alt="share">
+                    </div>
+                </div>
+            </div>
+            <div id="socials" class="inactive">
+                <div id="socials-flex">
+                    <!--only shown when share button is clicked-->
+                    <span>S H A R E</span>
+                    <div id="social-icons">
+                        <img src="images/icon-facebook.svg" alt="Facebook logo">
+                        <img src="images/icon-twitter.svg" alt="Twitter logo">
+                        <img src="images/icon-pinterest.svg" alt="Pinterest logo">
+                    </div>
+                    <div id="mobile-share-background" onclick = "share()">
+                        <img id="mobile-share" src="images/icon-share.svg" alt="share">
+                    </div>
+                    <div id="arrow"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            let desktopClicks = 0;
+            let mobileClicks = 0;
+            function share() {
+               const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+               if (vw > 1445) { //if we're on desktop
+               desktopClicks++;
+               let socials = document.getElementById("socials");
+               let newShare = document.getElementById("mobile-share-background");
+                if(!(desktopClicks % 2) == 0) {
+                    socials.setAttribute("class", "active-flex"); //turn on socials box
+                    newShare.setAttribute("class", "inactive");
+                }else {
+                    socials.setAttribute("class", "inactive");
+                    newShare.classList.remove("inactive");
+                }
+               }else { //if we're on mobile
+                mobileClicks++;
+                let authorInfo = document.getElementById("author-info");
+                let oldShare = document.getElementById("share-background");
+                let socials = document.getElementById("socials");
+                if(!(mobileClicks % 2) == 0) {
+                    authorInfo.setAttribute("class", "inactive"); //turn off author info
+                    oldShare.setAttribute("class", "inactive");
+                    socials.setAttribute("class", "active-flex");
+                } else {
+                    authorInfo.setAttribute("class", "active-flex"); //turn on author info
+                    oldShare.classList.remove("inactive");
+                    socials.setAttribute("class", "inactive");
+                }
+               }
+            }
+        </script>
+    </body>
+</html>

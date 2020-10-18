@@ -1,0 +1,231 @@
+body {
+    font-size: 13px;
+    font-family: Manrope, sans-serif;
+    text-align: center;
+}
+h1#title {
+    font-weight: 800;
+    color: hsl(217, 19%, 35%);
+    text-align: justify;
+}
+h2 {
+    font-weight: 500;
+    color: hsl(214, 17%, 51%);
+}
+h2#description {
+    text-align: left;
+}
+h2#name {
+    color: hsl(217, 19%, 35%);
+    font-weight: 800;
+}
+span {
+    font-weight: 800;
+    font-size: 20px;
+    color: hsl(214, 17%, 51%);
+}
+div#wrapper {
+    box-shadow: 14px 24px 48px 0px rgba(117,167,217,0.55);
+    margin: 100px 30px 30px 30px;
+    border-top-right-radius: 3%;
+    border-top-left-radius: 3%;
+}
+div#article-desc {
+    padding: 40px 200px 10px 200px;
+}
+/*innermost flex container */
+div#author-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*author-info's flex items */
+div#name-date {
+    flex: 1;
+}
+/*next innermost flex container */
+div#article-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*article-info's flex items */
+
+img#drawers {
+    border-top-right-radius: 3%;
+    border-top-left-radius: 3%;
+    max-width: 100%;
+}
+img#avatar {
+    border-radius: 50%;
+    max-width: 25%;
+}
+img#share {
+    width: 30px;
+    height: 26px;
+    padding: 10px;
+    display: static;
+}
+img#mobile-share {
+    width: 30px;
+    height: 26px;
+    padding: 10px;
+}
+/*share button hover and onclick style*/
+img#share:hover, img#mobile-share:hover {
+    filter: brightness(5);
+}
+div#share-background, div#mobile-share-background {
+    border-radius: 50%;
+    display: static !important;
+}
+div#share-background:hover, div#mobile-share-background:hover {
+    background-color: hsl(214, 17%, 51%);
+}
+.active-flex {
+    display: flex !important;
+}
+.inactive {
+    display: none !important;
+}
+div#socials {
+    position: absolute;
+    right: 120px;
+    top: 280px;
+    padding: 10px 20px 10px 20px;
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+div#socials-flex {
+    display: flex;
+    align-items: center;
+}
+div#social-icons {
+    padding: 0px 15px 0px 15px;
+}
+div#social-icons > * {
+    width: 30px;
+    padding: 0px 10px 0px 10px;
+}
+div#arrow {
+    width: 15px;
+    height: 15px;
+    background-color: hsl(217, 19%, 35%);
+    transform: rotate(45deg);
+    position: absolute;
+    left: 157px;
+    top: 44px;
+}
+
+
+
+
+
+/*flexbox for desktop*/
+@media(min-width: 1445px){
+    div#wrapper {
+        display: flex;
+    }
+    img#drawers {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 3%;
+    }
+    div#article-desc {
+        padding-left: 100px;
+    }
+}
+/*tablet*/
+@media(max-width: 1445px) {
+    div#wrapper {
+        display: block;
+        margin: 0 auto;
+        max-width: 660px;
+    }
+    div#article-desc {
+        padding: 40px 100px 10px 100px;
+    }
+    div#article-info {
+        flex-wrap: wrap;
+    }
+    div#arrow {
+        display: none;
+    }
+    div#socials {
+        position: static;
+        max-width: 100%;
+        height: 50px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+
+        justify-content: center;
+        align-items: center;
+    }
+    div#socials-flex {
+        justify-content: space-between;
+        flex: 1;
+    }
+    div#social-icons > * {
+        width: 40px;
+        padding: 0px 20px 0px 20px;
+    }
+    div#mobile-share-background {
+        margin-right: 80px;
+    }
+}
+
+/*mobile devices*/
+@media(max-width: 754px) {
+    div#article-desc {
+        padding: 40px 125px 10px 125px;
+    }
+}
+@media(max-width: 682px) {
+    div#article-desc {
+        padding: 40px 75px 10px 75px;
+    }
+}
+@media(max-width: 583px) {
+    div#article-desc {
+        padding: 40px 50px 10px 50px;
+    }
+}
+@media(max-width: 548px) {
+    body {
+        font-size: 11px;
+    }
+    div#mobile-share-background {
+        margin-right: 10px;
+    }
+    div#social-icons > * {
+        padding: 0px 10px 0px 10px;
+    }
+}
+@media(max-width: 490px) {
+    div#article-desc {
+        padding: 40px 30px 40px 30px;
+    }
+    div#share-background {
+        width: 25px;
+    }
+}
+@media(max-width: 430px) {
+    body {
+        font-size: 9px;
+    }
+    span {
+        font-size: 15px;
+    }
+    div#social-icons > * {
+        width: 25px;
+    }
+    div#mobile-share-background {
+        width: 15px;
+    }
+}
+@media(max-width: 300px) {
+    body {
+        font-size: 7px;
+    }
+}
