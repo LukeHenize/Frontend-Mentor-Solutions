@@ -23,6 +23,8 @@ div.rating {
 div#review-section {
     display: flex;
     flex-direction: column;
+
+    margin-bottom: 50px;
 }
 div.review {
     display: flex;
@@ -105,6 +107,7 @@ h3.review-text {
     div#review-section {
         flex-direction: row;
         align-items: flex-start;
+
         min-height: 400px;
     }
     div#review2 {
