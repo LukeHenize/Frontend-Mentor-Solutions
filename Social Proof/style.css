@@ -1,0 +1,119 @@
+html {
+    font-family: spartan;
+    color: hsl(300, 43%, 22%);
+    text-align: center;
+}
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 50px 20px 0px 20px;
+}
+h2#page-info {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 20px 20px 75px 20px;
+}
+div.rating > h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+div.rating {
+    margin-bottom: 75px;
+}
+div#review-section {
+    display: flex;
+    flex-direction: column;
+}
+div.review {
+    display: flex;
+    flex-direction: column;
+
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 15px;
+    margin: 10px 20px 10px 20px;
+}
+div.reviewer-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    margin: 30px 0px 10px 20px;
+    text-align: left;
+}
+img {
+    border-radius: 50%;
+    width: 70px;
+    height: 100%;
+    margin-right: 30px;
+}
+h3 {
+    color: white;
+    font-weight: normal;
+}
+span {
+    color: hsl(333, 80%, 67%);
+}
+h3.review-text {
+    margin: 0px 20px 20px 20px;
+    text-align: left;
+}
+
+/* desktop-size devices */
+@media(min-width: 920px) {
+
+    html {
+        margin: 0px 30px 0px 30px;
+    }
+    div#body-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    div#title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        max-width: 500px;
+        margin-top: 50px;
+    } 
+    h1, h2#page-info {
+        text-align: left;
+        margin-top: 0px;
+    }
+    div.rating-section {
+        display: flex;
+        flex-direction: column;
+    }
+    div.rating {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        min-width: 500px;
+        margin: 20px 0px 20px 0px;
+    }
+    div#rating2 {
+        margin-left: 40px;
+    }
+    div#rating3 {
+        margin-left: 80px;
+    }
+    div.stars {
+        margin-right: 20px;
+    }
+    div#review-section {
+        flex-direction: row;
+        align-items: flex-start;
+        min-height: 400px;
+    }
+    div#review2 {
+        margin-top: 40px;
+    }
+    div#review3 {
+        margin-top: 80px;
+    }
+
+}
+
+
